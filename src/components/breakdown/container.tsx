@@ -96,6 +96,7 @@ export default function BreakdownContainer({
               <a
                 href={`https://mempool.space/address/${initialValue}`}
                 target="_blank"
+                rel="noreferrer"
               >
                 View on Mempool
               </a>

@@ -138,7 +138,11 @@ export default function AIChat({
         <div css={[rcss.flex.column, rcss.colWithGap(16), rcss.align.center]}>
           <h3>
             Add your{" "}
-            <a href="https://platform.openai.com" target="_blank">
+            <a
+              href="https://platform.openai.com"
+              target="_blank"
+              rel="noreferrer"
+            >
               OpenAI API key
             </a>{" "}
             to learn more

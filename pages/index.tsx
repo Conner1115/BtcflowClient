@@ -27,11 +27,13 @@ const Home = () => {
         <div css={[rcss.flex.column, rcss.colWithGap(16)]}>
           <h1>Handshake timed out</h1>
 
-          <p>We couldn't establish a handshake with the Replit workspace.</p>
+          <p>
+            We couldn&apos;t establish a handshake with the Replit workspace.
+          </p>
 
           <p>
-            If you've already installed this Repl as an extension, refresh the
-            extension by hitting the Reload button in the top of the tab.
+            If you&apos;ve already installed this Repl as an extension, refresh
+            the extension by hitting the Reload button in the top of the tab.
           </p>
         </div>
       </div>

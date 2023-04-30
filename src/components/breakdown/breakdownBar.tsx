@@ -34,6 +34,7 @@ export default function BreakdownBar({
 
         return (
           <div
+            key={i}
             css={[
               rcss.position.absolute,
               {
