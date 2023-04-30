@@ -1,0 +1,33 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "export": "rm -rf .next && export NODE_ENV=development && yarn build && next export",
+    "format": "prettier --ignore-path .eslintignore --write \"**/*.{ts,tsx}\""
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.8",
+    "@replit/extensions": "^1.0.0",
+    "@replit/extensions-react": "^1.0.0",
+    "jotai": "^2.0.4",
+    "next": "12.2.0",
+    "prettier": "^2.8.8",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-feather": "^2.0.10",
+    "src": "^1.1.2"
+  },
+  "devDependencies": {
+    "@types/node": "18.0.1",
+    "@types/react": "18.0.14",
+    "@types/react-dom": "18.0.5",
+    "eslint": "8.19.0",
+    "eslint-config-next": "12.2.0",
+    "typescript": "4.7.4"
+  }
+}
