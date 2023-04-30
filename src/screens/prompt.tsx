@@ -28,8 +28,6 @@ export default function () {
         setType(res.message as InputType);
         if (res.message === InputType.BtcAddress) {
           setTab(ScreenEnum.WalletAddress);
-        } else if (res.message === InputType.TransactionHash) {
-          setTab(ScreenEnum.TransactionHash);
         } else {
           setTab(ScreenEnum.Unknown);
         }

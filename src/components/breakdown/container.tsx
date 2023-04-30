@@ -6,8 +6,10 @@ import { createContext, useEffect, useState } from "react";
 import { colors } from "./colors";
 import DetailContainer from "./detailContainer";
 
+// Need to pass the color map to different components
 export const colorMapCtx = createContext<Array<string>>([]);
 
+// Order an array randomly so we can choose some random colors
 function shuffle<T = any>(array: Array<T>) {
   let currentIndex = array.length,
     randomIndex;
@@ -36,8 +38,11 @@ export default function BreakdownContainer({
   initialValue: string;
 }) {
   const [colorMap, setColorMap] = useState<Array<string>>([]);
+
+  // Which chunk of the address are we viewing?
   const [viewing, setViewing] = useState<BreakdownInfo | null>(null);
 
+  // Upon mount, randomize the color map
   useEffect(() => {
     setColorMap(shuffle<string>(colors).reverse());
   }, []);
@@ -57,6 +62,7 @@ export default function BreakdownContainer({
           },
         ]}
       >
+        <span>Breakdown</span>
         <BreakdownBar breakdown={breakdown} initialValue={initialValue} />
 
         {viewing ? (
@@ -66,23 +72,35 @@ export default function BreakdownContainer({
             close={() => setViewing(null)}
           />
         ) : (
-          <div
-            css={{
-              wordWrap: "break-word",
-            }}
-          >
-            {breakdown.map((x, i) => (
-              <Span
-                key={i}
-                index={i}
-                value={x.value}
-                type={x.type}
-                onClick={() => {
-                  setViewing(breakdownInfo[x.type]);
-                }}
-              />
-            ))}
-          </div>
+          <>
+            <span>Chunks</span>
+            <div
+              css={{
+                wordWrap: "break-word",
+              }}
+            >
+              {breakdown.map((x, i) => (
+                <Span
+                  key={i}
+                  index={i}
+                  value={x.value}
+                  type={x.type}
+                  onClick={() => {
+                    setViewing(breakdownInfo[x.type]);
+                  }}
+                />
+              ))}
+            </div>
+
+            <span>
+              <a
+                href={`https://mempool.space/address/${initialValue}`}
+                target="_blank"
+              >
+                View on Mempool
+              </a>
+            </span>
+          </>
         )}
       </div>
     </colorMapCtx.Provider>

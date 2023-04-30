@@ -46,7 +46,7 @@ export default function () {
             <p>
               Bitcoin addresses are unique identifiers consisting of letters and
               numbers used to send or receive bitcoins. They are associated with
-              a private key that is known only to the owner of the address
+              a private key that is known only to the owner of the address.
             </p>
 
             <BreakdownContainer

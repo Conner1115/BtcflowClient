@@ -2,14 +2,6 @@ export enum BreakdownChunk {
   BTC_ADDR_VERSION = "btcAddrVersion",
   BTC_ADDR_HASH = "btcAddrHash",
   BTC_ADDR_CHECKSUM = "btcAddrChecksum",
-  TRS_VERSION = "version",
-  TRS_INPUT_COUNT = "inputCount",
-  TRS_INPUT_TRANSACTION_HASH = "inputTransactionHash",
-  TRS_INPUT_INDEX = "inputIndex",
-  TRS_SCRIPT_SIG = "scriptSig",
-  TRS_SEQUENCE = "sequence",
-  TRS_OUTPUT_COUNT = "outputCount",
-  TRS_FIRST_OUTPUT = "firstOutput",
 }
 
 export interface BreakdownItem {
@@ -61,53 +53,5 @@ When a bitcoin transaction is initiated, the recipient's bitcoin address and its
 It's worth noting that the checksum is not included in the actual address hash and is separate from the public key hash, which is used to identify the recipient of bitcoins.`,
     encoding: "utf-8",
     type: BreakdownChunk.BTC_ADDR_CHECKSUM,
-  },
-  [BreakdownChunk.TRS_VERSION]: {
-    tooltip: "Transaction Version",
-    description: `The version number of the transaction format.`,
-    encoding: "hex",
-    type: BreakdownChunk.TRS_VERSION,
-  },
-  [BreakdownChunk.TRS_INPUT_COUNT]: {
-    tooltip: "Transaction Input Count",
-    description: `The number of inputs in the transaction.`,
-    encoding: "hex",
-    type: BreakdownChunk.TRS_INPUT_COUNT,
-  },
-  [BreakdownChunk.TRS_INPUT_TRANSACTION_HASH]: {
-    tooltip: "Transaction Input Transaction Hash",
-    description: `The transaction ID (double SHA256 hash of the transaction) of the parent transaction that output the UTXO being spent in this input.`,
-    encoding: "hex",
-    type: BreakdownChunk.TRS_INPUT_TRANSACTION_HASH,
-  },
-  [BreakdownChunk.TRS_INPUT_INDEX]: {
-    tooltip: "Transaction Input Index",
-    description: `The index of the output being spent in the parent transaction.`,
-    encoding: "hex",
-    type: BreakdownChunk.TRS_INPUT_INDEX,
-  },
-  [BreakdownChunk.TRS_SCRIPT_SIG]: {
-    tooltip: "Transaction Script Signature",
-    description: `A script that provides the signature proving that the owner of the UTXO being spent can authorize the transaction.`,
-    encoding: "hex",
-    type: BreakdownChunk.TRS_SCRIPT_SIG,
-  },
-  [BreakdownChunk.TRS_SEQUENCE]: {
-    tooltip: "Transaction Input Sequence",
-    description: `A value that is used as a lock-time and indicates how the transaction should be processed with other transactions.`,
-    encoding: "hex",
-    type: BreakdownChunk.TRS_SEQUENCE,
-  },
-  [BreakdownChunk.TRS_OUTPUT_COUNT]: {
-    tooltip: "Transaction Output Count",
-    description: `The number of outputs in the transaction.`,
-    encoding: "hex",
-    type: BreakdownChunk.TRS_OUTPUT_COUNT,
-  },
-  [BreakdownChunk.TRS_FIRST_OUTPUT]: {
-    tooltip: "Transaction First Output",
-    description: `The amount of bitcoin being sent, followed by the scriptPubKey that determines who can spend the bitcoin.`,
-    encoding: "hex",
-    type: BreakdownChunk.TRS_FIRST_OUTPUT,
   },
 };

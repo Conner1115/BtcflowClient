@@ -3,6 +3,7 @@ import { rcss, tokens } from "src/lib/css";
 import { breakdownInfo, BreakdownItem } from "src/lib/types";
 import { colorMapCtx } from "./container";
 
+// The breakdown bar when you enter a bitcoin address
 export default function BreakdownBar({
   breakdown,
   initialValue,
@@ -41,7 +42,6 @@ export default function BreakdownBar({
                 top: 0,
                 left: `${pos * 100}%`,
                 background: colors[i] + "aa",
-                cursor: "pointer",
                 transition: "0.25s",
                 "&:hover::after": {
                   position: "absolute",

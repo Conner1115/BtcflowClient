@@ -4,8 +4,10 @@ import { HandshakeProvider, useThemeValues } from "@replit/extensions-react";
 import Head from "next/head";
 
 const AppProvider = ({ children }: { children: React.ReactNode }) => {
+  // Get Replit's theme colors so we can sync the theme
   const themeValues = useThemeValues();
 
+  // Insert the theme colors into the extension as CSS variables
   const mappedThemeValues = themeValues
     ? Object.entries(themeValues).map(
         ([key, val]) =>

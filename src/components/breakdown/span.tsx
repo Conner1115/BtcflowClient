@@ -23,12 +23,12 @@ export default function Span({
         rcss.py(2),
         rcss.borderRadius(4),
         {
-          background: colors[index] + "99",
+          background: colors[index] + "77",
           cursor: "pointer",
           color: tokens.foregroundDefault,
           border: `solid 1px transparent`,
           "&:hover": {
-            background: colors[index] + "cc",
+            background: colors[index] + "aa",
           },
           "&:active": {
             borderColor: tokens.accentPrimaryDefault,

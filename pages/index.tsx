@@ -3,7 +3,6 @@ import { ScreenEnum, TabAtom } from "src/state";
 import PromptScreen from "src/screens/prompt";
 import ErrorScreen from "src/screens/error";
 import AddressScreen from "src/screens/address";
-import TransactionScreen from "src/screens/transaction";
 import OpenAIScreen from "src/screens/openai";
 import IntroScreen from "src/screens/index";
 import UnknownScreen from "src/screens/unknown";
@@ -45,8 +44,6 @@ const Home = () => {
     return <PromptScreen />;
   } else if (tab === ScreenEnum.WalletAddress) {
     return <AddressScreen />;
-  } else if (tab === ScreenEnum.TransactionHash) {
-    return <TransactionScreen />;
   } else if (tab === ScreenEnum.OpenAI) {
     return <OpenAIScreen />;
   } else if (tab === ScreenEnum.Intro) {
