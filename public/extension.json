@@ -1,0 +1,17 @@
+{
+  "name": "Bitcoin thonker",
+  "description": "A starter template for a Replit Extension built with React",
+  "version": "0",
+  "tools": [
+
+    {
+      name: "Bitcoin Extension",
+      icon: "/favicon.svg",
+      handler: "/"
+    }
+
+  ],
+  icon: "/favicon.svg",
+  coverImages: null,
+  // For more info: https://docs.replit.com/extensions/api/manifest
+}
